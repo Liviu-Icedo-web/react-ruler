@@ -8,31 +8,41 @@ import Timeline from "./indextimeline";
 var layers = [
     {
         id: "3d1df1b4-4d9d-45a4-bf14-cb580ee74675",
-        name: "Layer 1"
+        name: "Market data"
     },
     {
         id: "7d8c4210-0cfa-4a10-8b21-01e6601e00bf",
-        name: "Layer 2"
+        name: "Historical"
     },
     {
         id: "65079f30-47a8-4469-833e-4f0eea04d233",
-        name: "Layer 3"
+        name: "Protfolio"
+    },
+    {
+        id: "65079f30-47a8-4469-833e-4f0eea04d239",
+        name: "Headline"
     }
+
 ];
 var frames = {
     "3d1df1b4-4d9d-45a4-bf14-cb580ee74675": [{
-        name: "Hello.png",
+        name: "webFg",
         second: 0,
         duration: 70
     }],
     "7d8c4210-0cfa-4a10-8b21-01e6601e00bf": [{
-        name: "Welcome.png",
+        name: "Thomas Reuter",
         second: 130,
         duration: 200
     }],
     "65079f30-47a8-4469-833e-4f0eea04d233": [{
-        name: "Goodbye.png",
+        name: "Morning Star",
         second: 10,
+        duration: 150
+    }],
+    "65079f30-47a8-4469-833e-4f0eea04d239": [{
+        name: "BolsaMania",
+        second: 15,
         duration: 150
     }]
 };

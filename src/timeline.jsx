@@ -17,6 +17,7 @@ class Timeline extends React.Component {
 
     render() {
         return <div className="timeline-editor">
+                <div className="">Play</div> 
             <div className="timeline-editor__container">
                 <div className="timeline-editor__layers">
                     <div className="timeline-editor__layers-header">Layers</div>

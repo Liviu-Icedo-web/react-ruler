@@ -7,8 +7,15 @@ export default class TimelineFrames extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {frames: props.frames, seconds: props.seconds, 
-            layers: props.layers, draggable: null};
+        this.state = {
+            frames: props.frames, 
+            seconds: props.seconds, 
+            layers: props.layers, 
+            draggable: null,
+            visibility:'hidden',
+            transition:'0s',
+            widthPlay:'0px'
+        };
     }
 
     handleFrameDragStart(e, layerKey, frameIndex) {
@@ -21,8 +28,8 @@ export default class TimelineFrames extends React.Component {
     }
 
     handleFrameDraggin(e) {
-        if(!this.state.draggable) return;
-        const currentClientX = e.clientX;
+        if(!this.state.draggable) return;        
+        const currentClientX = e.clientX !== undefined ? e.clientX : 500;
         const moveMouseX = currentClientX - this.state.draggable.startX;
         //TODO: move elements by 10?
         // if ((Math.abs(moveMouseX)%10)!==0) return;
@@ -30,6 +37,15 @@ export default class TimelineFrames extends React.Component {
         const layerKey = this.state.draggable.currentLayer;
         var frames = this.state.frames;
         frames[layerKey][index].second = frames[layerKey][index].second + moveMouseX;
+
+        var layerStopDragPoint = 500 -frames[layerKey][index].duration;
+
+        if(frames[layerKey][index].second >= layerStopDragPoint){
+            frames[layerKey][index].second = layerStopDragPoint;
+        }
+        if(frames[layerKey][index].second <= 0){
+            frames[layerKey][index].second = 0;
+        }
         
         this.setState({frames: frames, draggable: {
             currentLayer: layerKey,
@@ -44,14 +60,24 @@ export default class TimelineFrames extends React.Component {
         
         this.setState({draggable:null});
     }
+    cambia(e){
+        this.setState({
+            visibility:'visible',
+            transition:'5s',
+            widthPlay:'350px'
+        });
+    }
     
     render() {
         return (
             <div className="timeline-editor__frames" 
                 onMouseUp={() => this.handleFrameDragEnd()}>
+                <div className="bdi" style={{visibility:this.state.visibility,transition:this.state.transition,width:this.state.widthPlay}}></div>
+                <div className="bdi-noo"></div>
+                <button onClick={this.cambia.bind(this)}>Click me!</button>
                 <TimelineRuler seconds={this.state.seconds}/>
                 {this.state.layers.map((layer) =>
-                    <div className="timeline-editor__frames-container" style={{width:'50%'}} key={layer.id}>
+                    <div className="timeline-editor__frames-container" style={{width:this.state.seconds*100}} key={layer.id}>
                         <div className="timeline-editor__frames-layer"
                         style={{width:this.state.seconds*SECONDS_LENGTH}}
                         onMouseMove={(e) => this.handleFrameDraggin(e)}>
