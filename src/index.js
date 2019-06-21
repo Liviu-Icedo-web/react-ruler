@@ -26,29 +26,17 @@ var layers = [
 ];
 var frames = {
     "3d1df1b4-4d9d-45a4-bf14-cb580ee74675": [{
-<<<<<<< HEAD
-        name: "webFG",
-=======
         name: "webFg",
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
         second: 0,
         duration: 70
     }],
     "7d8c4210-0cfa-4a10-8b21-01e6601e00bf": [{
-<<<<<<< HEAD
-        name: "Thomson Reuters",
-=======
         name: "Thomas Reuter",
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
         second: 130,
         duration: 200
     }],
     "65079f30-47a8-4469-833e-4f0eea04d233": [{
-<<<<<<< HEAD
-        name: "SixApid",
-=======
         name: "Morning Star",
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
         second: 10,
         duration: 150
     }],

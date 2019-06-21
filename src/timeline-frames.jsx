@@ -31,14 +31,8 @@ export default class TimelineFrames extends React.Component {
     }
 
     handleFrameDraggin(e) {
-<<<<<<< HEAD
-        if(!this.state.draggable) return;
-        
-        const currentClientX = e.clientX;
-=======
         if(!this.state.draggable) return;        
         const currentClientX = e.clientX !== undefined ? e.clientX : 500;
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
         const moveMouseX = currentClientX - this.state.draggable.startX;
         //TODO: move elements by 10?
         // if ((Math.abs(moveMouseX)%10)!==0) return;
@@ -46,18 +40,6 @@ export default class TimelineFrames extends React.Component {
         const layerKey = this.state.draggable.currentLayer;
         var frames = this.state.frames;
         frames[layerKey][index].second = frames[layerKey][index].second + moveMouseX;
-<<<<<<< HEAD
-        this.setState(
-                {   frames: frames, 
-                    draggable: {
-                        currentLayer: layerKey,
-                        currentElementIndex: index,
-                        startX: currentClientX,
-                        containment: true
-                    },
-                }
-            );
-=======
 
         var layerStopDragPoint = 500 -frames[layerKey][index].duration;
 
@@ -74,7 +56,6 @@ export default class TimelineFrames extends React.Component {
             startX: currentClientX,
             //containment: 'parent'
         }});
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
         this.props.updateFrames(frames);
     }
 
@@ -96,16 +77,11 @@ export default class TimelineFrames extends React.Component {
             <div className="timeline-editor__frames" 
                 onMouseUp={() => this.handleFrameDragEnd()}>
                 <div className="bdi" style={{visibility:this.state.visibility,transition:this.state.transition,width:this.state.widthPlay}}></div>
-                <div className="bdi-noo"></div>
+                
                 <button onClick={this.cambia.bind(this)}>Click me!</button>
                 <TimelineRuler seconds={this.state.seconds}/>
-<<<<<<< HEAD
-                {this.state.layers.map((layer) =>                
-                    <div className="timeline-editor__frames-container" key={layer.id}>
-=======
                 {this.state.layers.map((layer) =>
                     <div className="timeline-editor__frames-container" style={{width:this.state.seconds*100}} key={layer.id}>
->>>>>>> 03c334527c1cebd9334d24dbbef9d1db5f615cc1
                         <div className="timeline-editor__frames-layer"
                         style={{width:this.state.seconds*SECONDS_LENGTH}}
                         onMouseMove={(e) => this.handleFrameDraggin(e)}>
