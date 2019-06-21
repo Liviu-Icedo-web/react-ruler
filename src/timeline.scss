@@ -17,6 +17,8 @@ $timeline_ruler_text_color: #55B;
         width: 100%;
     }    
 
+    
+
     &__frames {
         display: table-cell;
         overflow-x: auto;
@@ -31,8 +33,12 @@ $timeline_ruler_text_color: #55B;
         }
         
 
+        &-container{
+            background-color: rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
         &-layer {
-            border-bottom: 1px solid rgba(0,0,0,0.1);
             height: 1.5em;
             padding: 1px 0;
             position: relative;
@@ -143,4 +149,17 @@ $timeline_ruler_text_color: #55B;
             }
         }
     }
+}
+
+.bdi{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: calc(100% - 16px);
+    border-right: 1px solid #515873;
+    width: 0;
+    transition-property: width;
+    transition-timing-function: linear;
+    transition-duration: 0s;
 }
