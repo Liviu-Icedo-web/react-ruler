@@ -1,12 +1,12 @@
 $container_border_color: #555;
 $timeline_frame_10s_size: 100px;
-$timeline_frame_background_color: #FAA;
+$timeline_frame_background_color: #d2d2d2;
 $timeline_frame_text_color: #000;
-$timeline_layer_background_color: #FF0;
-$timeline_layer_header_background_color: #D65;
+$timeline_layer_background_color: #b9b9b8;
+$timeline_layer_header_background_color: #bfbfbf;
 $timeline_layer_header_text_color: #865;
-$timeline_layer_text_color: #91F;
-$timeline_ruler_background_color: #3AA;
+$timeline_layer_text_color: #000;
+$timeline_ruler_background_color: #d2d2d2;
 $timeline_ruler_text_color: #55B;
 
 .timeline-editor {
@@ -15,12 +15,21 @@ $timeline_ruler_text_color: #55B;
         display: table;
         table-layout: fixed;
         width: 100%;
-    }
+    }    
 
     &__frames {
         display: table-cell;
         overflow-x: auto;
         vertical-align: top;
+        
+        &-container {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-right: 1px solid rgba(0, 0, 0, 0.1);      
+            width: 500px;
+            background-color: #f1f1f1;
+    
+        }
+        
 
         &-layer {
             border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -110,7 +119,7 @@ $timeline_ruler_text_color: #55B;
         color: $timeline_layer_header_text_color;
         display: table-cell;
         vertical-align: top;
-        width: 200px;
+        width: 10%;
 
         &-header {
             border-bottom: 1px solid black;

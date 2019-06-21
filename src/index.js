@@ -21,17 +21,17 @@ var layers = [
 ];
 var frames = {
     "3d1df1b4-4d9d-45a4-bf14-cb580ee74675": [{
-        name: "Hello.png",
+        name: "webFG",
         second: 0,
         duration: 70
     }],
     "7d8c4210-0cfa-4a10-8b21-01e6601e00bf": [{
-        name: "Welcome.png",
+        name: "Thomson Reuters",
         second: 130,
         duration: 200
     }],
     "65079f30-47a8-4469-833e-4f0eea04d233": [{
-        name: "Goodbye.png",
+        name: "SixApid",
         second: 10,
         duration: 150
     }]

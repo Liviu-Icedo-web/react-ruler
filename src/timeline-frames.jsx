@@ -16,12 +16,16 @@ export default class TimelineFrames extends React.Component {
         this.setState({draggable:{
             currentLayer: layerKey,
             currentElementIndex: frameIndex,
-            startX: clientX
-        }});
+            startX: clientX,
+            bounds:'parent',
+            containment: true
+        }});  
+
     }
 
     handleFrameDraggin(e) {
         if(!this.state.draggable) return;
+        
         const currentClientX = e.clientX;
         const moveMouseX = currentClientX - this.state.draggable.startX;
         //TODO: move elements by 10?
@@ -30,13 +34,16 @@ export default class TimelineFrames extends React.Component {
         const layerKey = this.state.draggable.currentLayer;
         var frames = this.state.frames;
         frames[layerKey][index].second = frames[layerKey][index].second + moveMouseX;
-        
-        this.setState({frames: frames, draggable: {
-            currentLayer: layerKey,
-            currentElementIndex: index,
-            startX: currentClientX,
-            //containment: 'parent'
-        }});
+        this.setState(
+                {   frames: frames, 
+                    draggable: {
+                        currentLayer: layerKey,
+                        currentElementIndex: index,
+                        startX: currentClientX,
+                        containment: true
+                    },
+                }
+            );
         this.props.updateFrames(frames);
     }
 
@@ -46,12 +53,13 @@ export default class TimelineFrames extends React.Component {
     }
     
     render() {
+        
         return (
             <div className="timeline-editor__frames" 
                 onMouseUp={() => this.handleFrameDragEnd()}>
                 <TimelineRuler seconds={this.state.seconds}/>
-                {this.state.layers.map((layer) =>
-                    <div className="timeline-editor__frames-container" style={{width:'50%'}} key={layer.id}>
+                {this.state.layers.map((layer) =>                
+                    <div className="timeline-editor__frames-container" key={layer.id}>
                         <div className="timeline-editor__frames-layer"
                         style={{width:this.state.seconds*SECONDS_LENGTH}}
                         onMouseMove={(e) => this.handleFrameDraggin(e)}>
@@ -59,10 +67,10 @@ export default class TimelineFrames extends React.Component {
                         this.state.frames[layer.id].map((frame, index) =>
                             <TimelineFrame key={index} index={index} 
                             frame={frame} layerKey={layer.id} 
-                            dragEvent={this.handleFrameDragStart.bind(this)} />
+                            dragEvent={this.handleFrameDragStart.bind(this)} bounds='parent' />
                         )}
                         </div>
-                    </div>
+                    </div>                   
                 )}
             </div>
         );
