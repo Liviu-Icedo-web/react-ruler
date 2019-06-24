@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the snapshot 1`] = `
+<div
+  className="timeline-editor"
+>
+  <div
+    className="timeline-editor__container"
+  >
+    <div
+      className="timeline-editor__layers"
+    >
+      <div
+        className="timeline-editor__layers-header"
+      >
+        Layers
+      </div>
+      <ul>
+        <li>
+          Market data
+        </li>
+        <li>
+          Historical
+        </li>
+        <li>
+          Protfolio
+        </li>
+        <li>
+          Headline
+        </li>
+      </ul>
+    </div>
+    <div
+      className="timeline-editor__frames"
+      onMouseUp={[Function]}
+    >
+      <div
+        className="bdi"
+        style={
+          Object {
+            "transition": "0s",
+            "visibility": "hidden",
+            "width": "0px",
+          }
+        }
+      />
+      <button
+        onClick={[Function]}
+      >
+        Click me!
+      </button>
+      <div
+        className="timeline-editor__frames-ruler"
+        style={
+          Object {
+            "width": 510,
+          }
+        }
+      >
+        <div
+          className="timeline-editor__frames-ruler-s10s"
+        >
+          <span>
+            1
+          </span>
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+        </div>
+        <div
+          className="timeline-editor__frames-ruler-s10s"
+        >
+          <span>
+            2
+          </span>
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+        </div>
+        <div
+          className="timeline-editor__frames-ruler-s10s"
+        >
+          <span>
+            3
+          </span>
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+        </div>
+        <div
+          className="timeline-editor__frames-ruler-s10s"
+        >
+          <span>
+            4
+          </span>
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+        </div>
+        <div
+          className="timeline-editor__frames-ruler-s10s"
+        >
+          <span>
+            5
+          </span>
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+          <div
+            className="timeline-editor__frames-ruler__second"
+          />
+        </div>
+      </div>
+      <div
+        className="timeline-editor__frames-container"
+        style={
+          Object {
+            "width": 500,
+          }
+        }
+      >
+        <div
+          className="timeline-editor__frames-layer"
+          onMouseMove={[Function]}
+          style={
+            Object {
+              "width": 50,
+            }
+          }
+        >
+          <span
+            className="timeline-editor__frames-layer__item"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "left": 0,
+                "width": 70,
+              }
+            }
+          >
+            webFg
+          </span>
+        </div>
+      </div>
+      <div
+        className="timeline-editor__frames-container"
+        style={
+          Object {
+            "width": 500,
+          }
+        }
+      >
+        <div
+          className="timeline-editor__frames-layer"
+          onMouseMove={[Function]}
+          style={
+            Object {
+              "width": 50,
+            }
+          }
+        >
+          <span
+            className="timeline-editor__frames-layer__item"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "left": 130,
+                "width": 200,
+              }
+            }
+          >
+            Thomas Reuter
+          </span>
+        </div>
+      </div>
+      <div
+        className="timeline-editor__frames-container"
+        style={
+          Object {
+            "width": 500,
+          }
+        }
+      >
+        <div
+          className="timeline-editor__frames-layer"
+          onMouseMove={[Function]}
+          style={
+            Object {
+              "width": 50,
+            }
+          }
+        >
+          <span
+            className="timeline-editor__frames-layer__item"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "left": 10,
+                "width": 150,
+              }
+            }
+          >
+            Morning Star
+          </span>
+        </div>
+      </div>
+      <div
+        className="timeline-editor__frames-container"
+        style={
+          Object {
+            "width": 500,
+          }
+        }
+      >
+        <div
+          className="timeline-editor__frames-layer"
+          onMouseMove={[Function]}
+          style={
+            Object {
+              "width": 50,
+            }
+          }
+        >
+          <span
+            className="timeline-editor__frames-layer__item"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "left": 15,
+                "width": 150,
+              }
+            }
+          >
+            BolsaMania
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

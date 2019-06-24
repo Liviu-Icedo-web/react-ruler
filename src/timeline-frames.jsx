@@ -66,9 +66,18 @@ export default class TimelineFrames extends React.Component {
     cambia(e){
         this.setState({
             visibility:'visible',
-            transition:'5s',
-            widthPlay:'350px'
+            transition: this.state.seconds+'s linear',
+            widthPlay:'500px'
         });
+        
+        setTimeout(()=>{
+            this.setState({
+                visibility:'hidden',
+                transition: '0s linear',
+                widthPlay:'0px'
+            })
+        
+        },((this.state.seconds*1000)+250))//We add 250ms for the littel fadeOut on the end
     }
     
     render() {
